@@ -20,4 +20,18 @@ public class MultiplicationTableTest {
 
         assertThat(resultInteger, is(arrayContaining(5, 10, 15, 20, 25, 30, 35, 40, 45, 50)));
     }
+
+    @Test
+    public void testGetMultiplicationTableForZero() {
+        int num = 0;
+
+        int[] result = MultiplicationTable.getMultiplicationTable(num);
+
+        Integer[] resultInteger = new Integer[result.length];
+        for (int i = 0; i < result.length; i++) {
+            resultInteger[i] = result[i];
+        }
+
+        assertThat(resultInteger, is(arrayContaining(0, 0, 0, 0, 0, 0, 0, 0, 0, 0)));
+    }
 }
